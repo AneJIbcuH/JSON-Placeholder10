@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <button  @click="getData()" class="btn" v-show="x == 1" style="margin-right: 5px">{{ info == '' ? 'Запросить данные с сервера' : 'Обновить пользователей' }}</button>
+  
+  <button @click="x == 1 ? pageCreate() : pageAll()" v-show='info !== ""' style="margin-right: 5px" class="btn" >{{ x == 1 ? 'Создать пользователя' : 'Список пользователей' }}</button>
+  
+  <button  @click="createUser()" class="btn" v-show='x == 2'>Добавить пользователя</button>
+  
+    <hr>
+  
+  <div class="parent" v-show="x == 1">
+    <div class="title">Users</div>
+    <div v-for="(pers, index) in info">
+      <div v-if="index < 6 || index > 9" class="child" @click="getFullInfo(index)">
+         <div class="name">{{ pers.name }}</div>
+         <div class="username">{{ '@' + pers.username }}</div>
+         <div class="email">{{ pers.email }}</div>
+         <div class="phone">{{ pers.phone }}</div>
+      </div>
+    </div>    
+  </div>
+  
+  <div class="parent" v-show="x == 2">
+    <div class="createuseri">Create user</div>
+    <input type="text" v-model="newUser.name" placeholder="Name" class="namei">
+    <input type="text" v-model="newUser.username" placeholder="Username" class="usernamei">
+    <input type="text" v-model="newUser.email" placeholder="Email" class="emaili">
+    <input type="number" v-model="newUser.phone" placeholder="Phone" class="phonei">
+    <input type="text" v-model="newUser.website" placeholder="Website" class="websitei">
+    <input type="text" v-model="newUser.company.name" placeholder="Company Name" class="companyNamei">
+    <input type="text" v-model="newUser.address.city" placeholder="City" class="addressCityi">
+    <input type="text" v-model="newUser.address.street" placeholder="Street" class="addressStreeti">
+    <input type="text" v-model="newUser.address.suite" placeholder="Suite" class="addressSuitei">
+    <input type="number" v-model="newUser.address.zipcode" placeholder="Zipcode" class="addressZipcodei">
+  </div>
+  
+  <hr>
+  
+  <div class="parent" v-show="x == 3">
+    <div class="namef">{{ fullInfo.name }}</div>
+    <div class="usernamef">@{{ fullInfo.username }}</div>
+    <div class="emailfz">Email</div>
+    <div class="emailf">{{ fullInfo.email }}</div>
+    <div class="phonefz">Phone</div>
+    <div class="phonef">{{ fullInfo.phone }}</div>
+    <div class="websitefz">Website</div>
+    <div class="websitef">{{ fullInfo.website }}</div>
+    <div class="companyfz">Company</div>
+    <div class="companyf">{{ fullInfo.company.name }}</div>
+    <div class="addressfz">Address</div>
+    <div class="addressf">{{ fullInfo.address.suite }} {{ fullInfo.address.street }}, {{ fullInfo.address.city }}, {{ fullInfo.address.zipcode }}</div>
+  </div>
+  
+  
+  
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
