@@ -106,7 +106,7 @@
 .namei {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 50px;
     top: 152px;
     font-family: 'Inter';
@@ -120,7 +120,7 @@
 .usernamei {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 450px;
     top: 152px;
     font-family: 'Inter';
@@ -134,7 +134,7 @@
 .emaili {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 850px;
     top: 152px;
     font-family: 'Inter';
@@ -148,9 +148,9 @@
 .phonei {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 50px;
-    top: 256px;
+    top: 220px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -162,9 +162,9 @@
 .websitei {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 450px;
-    top: 256px;
+    top: 220px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -176,9 +176,9 @@
 .companyNamei {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 850px;
-    top: 256px;
+    top: 220px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -190,9 +190,9 @@
 .addressCityi {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 50px;
-    top: 360px;
+    top: 286px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -204,9 +204,9 @@
 .addressStreeti {
     position: absolute;
     width: 380px;
-    height: 72px;
+    height: 36px;
     left: 450px;
-    top: 360px;
+    top: 286px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -218,9 +218,9 @@
 .addressSuitei {
     position: absolute;
     width: 180px;
-    height: 72px;
+    height: 36px;
     left: 850px;
-    top: 360px;    
+    top: 286px;    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -232,9 +232,9 @@
 .addressZipcodei {
     position: absolute;
     width: 180px;
-    height: 72px;
+    height: 36px;
     left: 1050px;
-    top: 360px;
+    top: 286px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
